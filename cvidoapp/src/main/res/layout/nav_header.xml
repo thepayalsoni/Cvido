@@ -1,17 +1,82 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="192dp"
-    android:background="@color/color_title_bg"
-    android:gravity="bottom"
-    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:background="@color/color_slider_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <TextView
-        android:layout_width="match_parent"
+    <com.akslibrary.view.CircularImageView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Header"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-        android:textColor="@android:color/white" />
+        android:layout_marginRight="10dip"
+        android:src="@drawable/launcher" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="COMPANY NAME"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Android Developer with 4+ experience"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Australia"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/color_title_bg" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="akshay@gmail.com"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            android:textColor="@color/color_title_bg" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.akslibrary.view.SquareLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_orange"
+            android:padding="10dip">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="500" />
+        </com.akslibrary.view.SquareLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dip"
+            android:text="CREDITS"
+            android:textColor="@android:color/darker_gray" />
+
+    </LinearLayout>
 
 </LinearLayout>
