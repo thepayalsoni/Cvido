@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dip"
+                android:layout_marginTop="20dip"
+                android:adjustViewBounds="true"
+                android:src="@drawable/cvido_icon" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dip">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".34"
+                        android:textColor="@android:color/white"
+                        android:text="Job Seekers" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".31" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".34"
+                        android:text="Job Seekers" />
+
+                </LinearLayout>
+                <ToggleButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_checkbox"
+                    android:textOff=""
+                    android:textOn="" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".34"
+                        android:textColor="@android:color/white"
+                        android:text="Job Seekers" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".31" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight=".34"
+                        android:text="Job Seekers" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@color/color_title_bg"
+                    android:minWidth="40dip"
+                    android:padding="10dip"
+                    android:src="@drawable/message_icon" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    android:id="@+id/txt_signup_username"
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/str_enter_email"
+                    android:inputType="text"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@color/color_title_bg"
+                    android:minWidth="40dip"
+                    android:padding="10dip"
+                    android:src="@drawable/password_icon" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    android:id="@+id/txt_signup_password"
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:hint="@string/str_password"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:background="@color/color_title_bg"
+                    android:minWidth="40dip"
+                    android:padding="10dip"
+                    android:src="@drawable/password_icon" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    android:id="@+id/txt_signup_repassword"
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:hint="@string/str_re_password"
+                    android:inputType="textPassword"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <com.akslibrary.view.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:text="@string/str_confirm_sign_up_tnc"
+                android:textColor="@android:color/darker_gray" />
+
+            <com.akslibrary.view.TypefacedTextView
+                android:id="@+id/btnRegisterUser"
+                style="@style/style_button_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="@android:color/black"
+                android:clickable="true"
+                android:onClick="onClickHandler"
+                android:text="@string/str_create_account" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnSignupFb"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="30dip"
+                    android:background="@drawable/facebook_icon" />
+
+                <Button
+                    android:id="@+id/btnSignupTwitter"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/skype_icon"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnSignupLinkedIn"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dip"
+                    android:layout_marginRight="30dip"
+                    android:background="@drawable/linkedin_icon" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/avtar_icon"
+                    android:drawablePadding="5dip"
+                    android:gravity="center"
+                    android:minHeight="30dip"
+                    android:padding="10dip"
+                    android:text="Sign In"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/darker_gray" />
+
+                <TextView
+                    android:id="@+id/textVie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/help_icon"
+                    android:drawablePadding="5dip"
+                    android:gravity="center"
+                    android:minHeight="30dip"
+                    android:padding="10dip"
+                    android:text="Help?"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/darker_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
