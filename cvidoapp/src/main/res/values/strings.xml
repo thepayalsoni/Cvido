@@ -20,17 +20,59 @@
     <string name="slider_logout">Logout</string>
 
     <string name="font_helvetica">fonts/HelveticaNeue.otf</string>
-    <string name="font_raleway">fonts/Raleway.ttf</string>
+    <string name="font_raleway">fonts/Raleway-Bold.ttf</string>
 
 
     <string name="str_enter_email">Enter Email Address</string>
     <string name="str_password">Password</string>
     <string name="str_re_password">Re-Enter Password</string>
     <string name="str_create_account">Create Account</string>
+    <string name="str_jobseeker">Jobseekers</string>
+    <string name="str_employer">Employer</string>
+    <string name="str_sign_in">Sign In</string>
+    <string name="str_sign_up">Sign Up</string>
+    <string name="str_remember_me">Remember me</string>
+    <string name="str_forgot_password">Forgot Password?</string>
+    <string name="str_login">Login</string>
     <string name="str_confirm_sign_up_tnc">By Registering you confirm that you accept the Terms and Conditions and Privacy Policy.</string>
+    <string name="str_forgot_your_password">Forgot your Password?</string>
+    <string name="str_reset_password_description">Enter your e-mail below to reset your password.</string>
+    <string name="str_enter_your_email">Enter Your Email Address</string>
+    <string name="str_submit">Submit</string>
+    <string name="str_cancel">Cancel</string>
+
+    <string name="str_company_name">Company Name</string>
+    <string name="str_hint_email">abc@gmail.com</string>
+    <string name="str_hint_url">http://weburl.com</string>
+    <string name="str_category">Category</string>
+    <string name="str_hint_phone">(555)123-4567-890</string>
+    <string name="str_address">Address</string>
+    <string name="str_city">City</string>
+    <string name="str_country">Country</string>
+    <string name="str_zip_postalcode">Zip code/Post Code</string>
+
+    <string name="str_personal_information_cap">PERSONAL INFORMATION</string>
+    <string name="str_security_cap">SECURITY</string>
+    <string name="str_social_network_cap">SOCIAL NETWORK</string>
+    <string name="str_notification">Notification</string>
+    <string name="str_alert">Alert</string>
+    <string name="str_change_password">Change Password</string>
+
+    <string name="str_facebook_connect">Facebook Connect</string>
+    <string name="str_twitter_connect">Twitter Connect</string>
+    <string name="str_linkedin_connect">Linkedin Connect</string>
+    <string name="str_skype_connect">Skype Connect</string>
+
+    <string name="str_suspend_account">Suspend My Account</string>
+    <string name="str_delete_account">Delete My Account</string>
+    <string name="str_change_banner">Change Banner</string>
 
 
+    <string name="error_empty_filelds">Please enter all the fields first.</string>
+    <string name="error_re_password">Re-password does not matched</string>
 
 
+    <string name="URL_BASE">http://cvidoweb.betaclubs.com/api/</string>
+    <string name="URL_REGISTER">register</string>
 
 </resources>

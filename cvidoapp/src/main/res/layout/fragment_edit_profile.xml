@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:akshay="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorDarkGrey"
+                android:minHeight="30dip"
+                android:padding="10dip"
+                android:text="@string/str_personal_information_cap"
+                android:textColor="@color/colorLightGrey"
+                android:textSize="18dip" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgCoverPage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignTop="@+id/button"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="250dip"
+                    android:minHeight="200dip"
+                    android:src="@drawable/cvido_icon" />
+
+                <com.akslibrary.view.TypefacedTextView
+                    android:id="@+id/button"
+                    style="@style/style_button_blue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="7dip"
+                    android:background="#8CFFFFFF"
+                    android:minHeight="30dip"
+                    android:text="@string/str_change_banner"
+                    android:textColor="@android:color/black"
+                    android:textSize="13dip"
+                    akshay:typeface="@string/font_raleway" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="30dip">
+
+                    <ImageView
+                        android:id="@+id/imgUserProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:background="@drawable/avtar_box2"
+                        android:padding="30dip"
+                        android:src="@drawable/cvido_icon" />
+
+                    <com.akslibrary.view.SquareLayout
+                        android:id="@+id/llSquareLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/imgUserProfile"
+                        android:layout_alignRight="@+id/imgUserProfile"
+                        android:layout_alignTop="@+id/imgUserProfile"
+                        android:background="@drawable/circle_grey"
+                        android:padding="7dip">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/edit" />
+                    </com.akslibrary.view.SquareLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <com.akslibrary.view.TypefacedEditText
+                android:id="@+id/txt_signup_username"
+                style="@style/style_textbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dip"
+                android:background="@drawable/text_bg_black_border"
+                android:hint="@string/str_enter_email"
+                android:padding="5dip"
+                android:text="Lore dfhdf hjjghjg ghhgghgyt ftfff  tftffftft tftfttftf tfffttftf vgvggvvgv gvgvddddffd jhjh
+                fgfgfgfgf gfgfgfgfgh    "
+                akshay:typeface="@string/font_raleway" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

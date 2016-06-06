@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:akshay="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/app_bg"
@@ -10,6 +11,7 @@
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_weight="1"
         android:paddingLeft="20dip"
         android:paddingRight="20dip">
 
@@ -27,69 +29,77 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/cvido_icon" />
 
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dip">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:weightSum="1">
+                    android:id="@+id/llToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
 
-                    <TextView
-                        android:layout_width="0dp"
+                    <ToggleButton
+                        android:id="@+id/tbJobSeekerEmployee"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight=".34"
-                        android:textColor="@android:color/white"
-                        android:text="Job Seekers" />
-
-                    <View
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".31" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight=".34"
-                        android:text="Job Seekers" />
-
+                        android:background="@drawable/custom_checkbox"
+                        android:checked="true"
+                        android:textOff=""
+                        android:textOn="" />
                 </LinearLayout>
-                <ToggleButton
+
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/custom_checkbox"
-                    android:textOff=""
-                    android:textOn="" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_alignEnd="@+id/llToggle"
+                    android:layout_alignRight="@+id/llToggle"
+                    android:layout_centerVertical="true"
+                    android:gravity="center_vertical"
                     android:orientation="horizontal"
                     android:weightSum="1">
 
-                    <TextView
+                    <com.akslibrary.view.TypefacedTextView
+                        android:id="@+id/lblJobSeeker"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dip"
                         android:layout_weight=".34"
-                        android:textColor="@android:color/white"
-                        android:text="Job Seekers" />
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="@string/str_jobseeker"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="10dip"
+                        akshay:typeface="@string/font_helvetica" />
 
                     <View
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".31" />
 
-                    <TextView
+                    <com.akslibrary.view.TypefacedTextView
+                        android:id="@+id/lblEmployer"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight=".34"
-                        android:text="Job Seekers" />
+                        android:gravity="center"
+                        android:padding="10dip"
+                        android:shadowColor="#80000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:shadowRadius="1"
+                        android:text="@string/str_employer"
+                        android:textColor="@android:color/black"
+                        android:textSize="10dip"
+                        akshay:typeface="@string/font_helvetica" />
 
                 </LinearLayout>
 
-            </FrameLayout>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -98,12 +108,11 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dip"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:background="@color/color_title_bg"
-                    android:minWidth="40dip"
                     android:padding="10dip"
                     android:src="@drawable/message_icon" />
 
@@ -125,12 +134,11 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dip"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:background="@color/color_title_bg"
-                    android:minWidth="40dip"
                     android:padding="10dip"
                     android:src="@drawable/password_icon" />
 
@@ -154,12 +162,11 @@
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="40dip"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:adjustViewBounds="true"
                     android:background="@color/color_title_bg"
-                    android:minWidth="40dip"
                     android:padding="10dip"
                     android:src="@drawable/password_icon" />
 
@@ -177,7 +184,8 @@
 
             </LinearLayout>
 
-            <com.akslibrary.view.TypefacedTextView
+            <CheckBox
+                android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dip"
@@ -231,42 +239,43 @@
                     android:background="@drawable/linkedin_icon" />
             </LinearLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
-                    android:clickable="true"
-                    android:drawableLeft="@drawable/avtar_icon"
-                    android:drawablePadding="5dip"
-                    android:gravity="center"
-                    android:minHeight="30dip"
-                    android:padding="10dip"
-                    android:text="Sign In"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/darker_gray" />
-
-                <TextView
-                    android:id="@+id/textVie"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:clickable="true"
-                    android:drawableLeft="@drawable/help_icon"
-                    android:drawablePadding="5dip"
-                    android:gravity="center"
-                    android:minHeight="30dip"
-                    android:padding="10dip"
-                    android:text="Help?"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@android:color/darker_gray" />
-            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/btn_sign_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/avtar_icon"
+            android:drawablePadding="5dip"
+            android:gravity="center"
+            android:minHeight="30dip"
+            android:onClick="onClickHandler"
+            android:padding="10dip"
+            android:text="Sign In"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/textVie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:clickable="true"
+            android:drawableLeft="@drawable/help_icon"
+            android:drawablePadding="5dip"
+            android:gravity="center"
+            android:minHeight="30dip"
+            android:padding="10dip"
+            android:text="Help?"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/darker_gray" />
+    </RelativeLayout>
 
 </LinearLayout>

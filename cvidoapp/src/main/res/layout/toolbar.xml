@@ -24,13 +24,14 @@
             android:src="@drawable/launcher"
             android:visibility="gone" />
 
-        <TextView
+        <com.akslibrary.view.TypefacedTextView
             android:id="@+id/title_toolbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:textColor="@android:color/black"
-            android:textSize="18dp" />
+            android:textSize="18dp"
+            app:typeface="@string/font_raleway" />
 
     </LinearLayout>
 </android.support.v7.widget.Toolbar>
