@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -32,6 +33,7 @@ public class RegisterActivity extends Activity {
     String userType = "2";
     TextView lblEmployer, lblJobSeeker;
 
+    // public static final byte[] IV = hexStringToByteArray("00000000000000000000000000000000");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,18 +42,37 @@ public class RegisterActivity extends Activity {
         lblJobSeeker = (TextView) findViewById(R.id.lblJobSeeker);
         lblEmployer = (TextView) findViewById(R.id.lblEmployer);
 
+        //////////////////////////////////////////////////////////////////
+
+       /* try{
+            byte[] key = hexStringToByteArray("6900C66B5C13A7579766926ED31B2374BFA80E2FBEEF7860B322159A280378F0");
+            System.out.println(key);
+            System.out.println(IV);
+            String output = decryptStringAES("mo9mbeVkp3HY2o+n/Jt/5MyJcSlQZSryUWVeauNizAimiTzZGbJ/DxtiwqXur5XTMfhNivgtxiXzNpS9dZMUoc6YZbmZuYz5SULuMj7AW2dXwqFLUmBJTRa39f49rjUf",
+                    key);
+            System.out.println("This is the output");
+            System.out.println(key);
+            System.out.println(output);
+        }
+        catch (Exception e){
+            System.out.println(e);
+        }*/
+
+
+        //////////////////////////////////////////////////////////////////////
+
         tbJobSeekerEmployee = (ToggleButton) findViewById(R.id.tbJobSeekerEmployee);
 
         tbJobSeekerEmployee.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    lblJobSeeker.setTextColor(getResources().getColor(android.R.color.darker_gray));
-                    lblEmployer.setTextColor(getResources().getColor(R.color.app_bg));
+                    lblJobSeeker.setTextColor(ContextCompat.getColor(getApplicationContext(), android.R.color.darker_gray));
+                    lblEmployer.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.app_bg));
                     userType = "2";
                 } else {
-                    lblJobSeeker.setTextColor(getResources().getColor(R.color.app_bg));
-                    lblEmployer.setTextColor(getResources().getColor(android.R.color.darker_gray));
+                    lblJobSeeker.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.app_bg));
+                    lblEmployer.setTextColor(ContextCompat.getColor(getApplicationContext(), android.R.color.darker_gray));
                     userType = "3";
                 }
             }
@@ -149,5 +170,23 @@ public class RegisterActivity extends Activity {
         }
     }
 
+
+
+
+   /* public static String decryptStringAES (String input, byte[] key) throws Exception { byte[] inputBytes = org.apache.commons.codec.binary.Base64.decodeBase64(input.getBytes());
+        Cipher decryptCipher = Cipher.getInstance("AES/CBC/PKCS5Padding"); decryptCipher.init(Cipher.DECRYPT_MODE, new SecretKeySpec(key, "AES"), new IvParameterSpec(IV));
+        byte[] decrypt = decryptCipher.doFinal(inputBytes);
+        return  new String(decrypt);
+    }
+
+    public static byte[] hexStringToByteArray(String s) {
+        int len = s.length();
+        byte[] data = new byte[len / 2];
+        for (int i = 0; i < len; i += 2) {
+            data[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4)
+                    + Character.digit(s.charAt(i+1), 16));
+        }
+        return data;
+    }*/
 
 }

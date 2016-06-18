@@ -104,10 +104,128 @@
                 android:layout_margin="20dip"
                 android:background="@drawable/text_bg_black_border"
                 android:hint="@string/str_enter_email"
-                android:padding="5dip"
-                android:text="Lore dfhdf hjjghjg ghhgghgyt ftfff  tftffftft tftfttftf tfffttftf vgvggvvgv gvgvddddffd jhjh
-                fgfgfgfgf gfgfgfgfgh    "
-                akshay:typeface="@string/font_raleway" />
+                android:padding="10dip"
+                android:text="My Descriptionnnnn asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdfasdf "
+                akshay:typeface="@string/font_helvetica" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dip"
+                android:background="@drawable/text_bg_black_border"
+                android:orientation="vertical">
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/avtar_icon"
+                    android:drawablePadding="5dip"
+                    android:hint="@string/str_hint_email"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/avtar_icon"
+                    android:drawablePadding="5dip"
+                    android:hint="@string/str_hint_url"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/avtar_icon"
+                    android:drawablePadding="5dip"
+                    android:hint="@string/str_hint_phone"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/avtar_icon"
+                    android:drawablePadding="5dip"
+                    android:hint="@string/str_address"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/avtar_icon"
+                    android:drawablePadding="5dip"
+                    android:hint="@string/str_city"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/avtar_icon"
+                    android:drawablePadding="5dip"
+                    android:hint="@string/str_country"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/avtar_icon"
+                    android:drawablePadding="5dip"
+                    android:hint="@string/str_zip_postalcode"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

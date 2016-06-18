@@ -3,7 +3,6 @@ package com.cvido;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,15 +12,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
+import com.cvido.application.CvidoApplication;
 import com.cvido.fragment.FirstFragment;
 import com.cvido.fragment.SecondFragment;
 import com.cvido.fragment.ThirdFragment;
+import com.cvido.model.Register;
 
 public class HomeActivity extends AppCompatActivity {
     private DrawerLayout mDrawer;
     public Toolbar toolbar;
     private NavigationView nvDrawer;
     private ActionBarDrawerToggle drawerToggle;
+    Register loginData;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +36,14 @@ public class HomeActivity extends AppCompatActivity {
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         nvDrawer = (NavigationView) findViewById(R.id.nvView);
+
+        loginData = CvidoApplication.getAppliation().getRegister();
+        nvDrawer.getMenu().clear();
+        if (loginData != null && loginData.getData().getRoleId() == 2)
+            nvDrawer.inflateMenu(R.menu.drawer_view_jobseeker);
+        else
+            nvDrawer.inflateMenu(R.menu.drawer_view_employer);
+
         drawerToggle = setupDrawerToggle();
         // Setup drawer view
         setupDrawerContent(nvDrawer);

@@ -11,7 +11,7 @@ public class Register implements Serializable {
     public static long getSerialVersionUID() {
         return serialVersionUID;
     }
-    
+
     @SerializedName("success")
     private boolean success;
 
@@ -20,7 +20,6 @@ public class Register implements Serializable {
 
     @SerializedName("data")
     private Data data;
-
 
     public boolean getSuccess() {
         return success;
@@ -38,7 +37,7 @@ public class Register implements Serializable {
         this.message = message;
     }
 
-    public class Data {
+    public class Data implements Serializable {
 
         @SerializedName("id")
         private int id;
@@ -75,10 +74,6 @@ public class Register implements Serializable {
 
         @SerializedName("status")
         private String status;
-
-        public Data() {
-        }
-
 
         public int getId() {
             return id;

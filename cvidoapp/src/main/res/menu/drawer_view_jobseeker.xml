@@ -1,0 +1,43 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_first_fragment"
+            android:checked="true"
+            android:icon="@drawable/edit"
+            android:title="@string/slider_edit_profile" />
+        <item
+            android:id="@+id/nav_second_fragment"
+            android:icon="@drawable/edit"
+            android:title="@string/slider_create_cv" />
+        <item
+            android:id="@+id/nav_third_fragment"
+            android:icon="@drawable/message_icon"
+            android:title="@string/slider_message" />
+
+        <item
+            android:id="@+id/nav_fourth_fragment"
+            android:icon="@drawable/download"
+            android:title="@string/slider_download_cv" />
+
+        <item
+            android:id="@+id/nav_seventh_fragment"
+            android:icon="@drawable/gallery_icon"
+            android:title="@string/slider_video_gallery" />
+
+        <item
+            android:id="@+id/nav_eigth_fragment"
+            android:icon="@drawable/message_icon"
+            android:title="@string/slider_reviews" />
+
+        <item
+            android:id="@+id/nav_ninth_fragment"
+            android:icon="@drawable/search_icon"
+            android:title="@string/slider_availabity" />
+
+        <item
+            android:id="@+id/nav_tenth_fragment"
+            android:icon="@drawable/suspend_account_icon"
+            android:title="@string/slider_logout" />
+    </group>
+</menu>

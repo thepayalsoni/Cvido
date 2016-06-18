@@ -19,6 +19,12 @@
     <string name="slider_saved_search">Saved Search</string>
     <string name="slider_logout">Logout</string>
 
+
+    <string name="slider_create_cv">Create CV</string>
+    <string name="slider_download_cv">Download CV</string>
+    <string name="slider_availabity">Availabity</string>
+
+
     <string name="font_helvetica">fonts/HelveticaNeue.otf</string>
     <string name="font_raleway">fonts/Raleway-Bold.ttf</string>
 
@@ -74,5 +80,6 @@
 
     <string name="URL_BASE">http://cvidoweb.betaclubs.com/api/</string>
     <string name="URL_REGISTER">register</string>
+    <string name="URL_LOGIN">default/login</string>
 
 </resources>

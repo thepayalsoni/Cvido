@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.cvido.R;
 import com.cvido.HomeActivity;
+import com.cvido.R;
 
 public class ThirdFragment extends Fragment {
     TextView title_toolbar;
@@ -21,7 +21,7 @@ public class ThirdFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_first, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_edit_profile, container, false);
 
         Toolbar toolbar = ((HomeActivity) getActivity()).toolbar;
         title_toolbar = (TextView) toolbar.findViewById(R.id.title_toolbar);

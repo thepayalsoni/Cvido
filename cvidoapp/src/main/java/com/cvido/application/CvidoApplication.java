@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Application;
 
 import com.akslibrary.utility.ShareData;
-import com.akslibrary.utility.Util;
 import com.cvido.model.Register;
 
 public class CvidoApplication extends Application {
@@ -61,9 +60,9 @@ public class CvidoApplication extends Application {
 
     public void initRegister(Register currentUser, boolean forceWrite) {
 
-        if (getShavedData().getDataFromSharedPref(Util.KEY_LOGIN_USER) == null || getShavedData().getDataFromSharedPref(Util.KEY_LOGIN_USER).equals("") || forceWrite) {
-            getShavedData().clearSharedPref(Util.KEY_LOGIN_USER);
-            getShavedData().addToSharedPref(Util.KEY_LOGIN_USER, Serializer.serialize(currentUser));
+        if (getShavedData().getDataFromSharedPref(AppUtill.KEY_LOGIN_USER) == null || getShavedData().getDataFromSharedPref(AppUtill.KEY_LOGIN_USER).equals("") || forceWrite) {
+            getShavedData().clearSharedPref(AppUtill.KEY_LOGIN_USER);
+            getShavedData().addToSharedPref(AppUtill.KEY_LOGIN_USER, Serializer.serialize(currentUser));
         }
         this.loginData = currentUser;
     }

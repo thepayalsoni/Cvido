@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.cvido.R;
 import com.cvido.HomeActivity;
+import com.cvido.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,8 +30,7 @@ public class SecondFragment extends Fragment {
         title_toolbar = (TextView) toolbar.findViewById(R.id.title_toolbar);
         title_toolbar.setText(getString(R.string.str_second_fragment));
 
-
-        String text="asdf adsf asdfasdf http://www.google.com adsfasdfas asdf adsf asdfasdf http://www.yahoo.com adsfasdfas asdf adsf asdfasdf http://www.gmail.com adsfasdfas";
+        String text = "asdf adsf asdfasdf http://www.google.com adsfasdfas asdf adsf asdfasdf http://www.yahoo.com adsfasdfas asdf adsf asdfasdf http://www.gmail.com adsfasdfas";
         String pattern1 = "http://";
         String pattern2 = " ";
 
@@ -39,7 +38,7 @@ public class SecondFragment extends Fragment {
         Pattern p = Pattern.compile(Pattern.quote(pattern1) + "(.*?)" + Pattern.quote(pattern2));
         Matcher m = p.matcher(text);
         while (m.find()) {
-            System.out.println("dataaaaa==="+m.group(1));
+            System.out.println("dataaaaa===" + m.group(1));
         }
 
 
