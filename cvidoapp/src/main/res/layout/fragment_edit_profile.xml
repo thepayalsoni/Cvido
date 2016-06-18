@@ -9,7 +9,8 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,7 +29,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="visible">
 
                 <ImageView
                     android:id="@+id/imgCoverPage"
@@ -38,9 +40,9 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignTop="@+id/button"
                     android:adjustViewBounds="true"
+                    android:background="@android:color/holo_blue_light"
                     android:maxHeight="250dip"
-                    android:minHeight="200dip"
-                    android:src="@drawable/cvido_icon" />
+                    android:minHeight="200dip" />
 
                 <com.akslibrary.view.TypefacedTextView
                     android:id="@+id/button"
@@ -78,9 +80,9 @@
                         android:id="@+id/llSquareLayout"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imgUserProfile"
                         android:layout_alignEnd="@+id/imgUserProfile"
                         android:layout_alignRight="@+id/imgUserProfile"
-                        android:layout_alignTop="@+id/imgUserProfile"
                         android:background="@drawable/circle_grey"
                         android:padding="7dip">
 
@@ -115,7 +117,8 @@
                 android:layout_marginLeft="20dip"
                 android:layout_marginRight="20dip"
                 android:background="@drawable/text_bg_black_border"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="visible">
 
                 <com.akslibrary.view.TypefacedEditText
                     style="@style/style_textbox"
@@ -226,8 +229,296 @@
 
 
             </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSecurity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorDarkGrey"
+                    android:minHeight="30dip"
+                    android:padding="10dip"
+                    android:text="@string/str_security_cap"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="18dip" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip">
+
+                    <com.akslibrary.view.TypefacedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/message_icon"
+                        android:drawablePadding="5dip"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dip"
+                        android:text="@string/str_notification"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="13dip"
+                        akshay:typeface="@string/font_raleway" />
+
+                    <ToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/custom_toggle"
+                        android:minWidth="0dp"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip">
+
+                    <com.akslibrary.view.TypefacedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/alerts_icon"
+                        android:drawablePadding="5dip"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dip"
+                        android:text="@string/str_alert"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="13dip"
+                        akshay:typeface="@string/font_raleway" />
+
+                    <ToggleButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:button="@drawable/custom_toggle"
+                        android:minWidth="0dp"
+                        android:text=""
+                        android:textOff=""
+                        android:textOn="" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dip"
+                    android:paddingRight="10dip">
+
+                    <com.akslibrary.view.TypefacedTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawableLeft="@drawable/password_icon"
+                        android:drawablePadding="5dip"
+                        android:gravity="center_vertical"
+                        android:minHeight="30dip"
+                        android:text="@string/str_change_password"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="13dip"
+                        akshay:typeface="@string/font_raleway" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_media_play" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSocialNetwork"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorDarkGrey"
+                    android:minHeight="30dip"
+                    android:padding="10dip"
+                    android:text="@string/str_social_network_cap"
+                    android:textColor="@color/colorLightGrey"
+                    android:textSize="18dip" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/facebook_icon2"
+                    android:drawablePadding="10dip"
+                    android:hint="@string/str_facebook_connect"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/twitter_icon2"
+                    android:drawablePadding="10dip"
+                    android:hint="@string/str_twitter_connect"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/linkedin_icon2"
+                    android:drawablePadding="10dip"
+                    android:hint="@string/str_linkedin_connect"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+                <com.akslibrary.view.TypefacedEditText
+                    style="@style/style_textbox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:drawableLeft="@drawable/skype_icon"
+                    android:drawablePadding="10dip"
+                    android:hint="@string/str_skype_connect"
+                    android:padding="10dip"
+                    akshay:typeface="@string/font_helvetica" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@android:color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.akslibrary.view.TypefacedTextView
+                    android:id="@+id/btnProfileUpdate"
+                    style="@style/style_button_blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_weight=".5"
+                    android:background="@android:color/black"
+                    android:clickable="true"
+                    android:onClick="onClickHandler"
+                    android:text="@string/str_submit"
+                    akshay:typeface="@string/font_raleway" />
+
+                <com.akslibrary.view.TypefacedTextView
+                    android:id="@+id/btnProfileCancel"
+                    style="@style/style_button_blue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginTop="15dip"
+                    android:layout_weight=".5"
+                    android:background="@color/button_grey"
+                    android:clickable="true"
+                    android:onClick="onClickHandler"
+                    android:text="@string/str_cancel"
+                    akshay:typeface="@string/font_raleway" />
+
+            </LinearLayout>
+
+
         </LinearLayout>
     </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_title_bg"
+        android:orientation="horizontal"
+        android:padding="5dip"
+        android:weightSum="1">
+
+        <com.akslibrary.view.TypefacedTextView
+            android:id="@+id/btnProfileSuspend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_weight=".5"
+            android:clickable="true"
+            android:drawablePadding="5dip"
+            android:drawableTop="@drawable/custom_suspend"
+            android:gravity="center"
+            android:onClick="onClickHandler"
+            android:text="@string/str_suspend_account"
+            android:textColor="@android:color/black"
+            akshay:typeface="@string/font_raleway" />
+
+        <com.akslibrary.view.TypefacedTextView
+            android:id="@+id/btnProfileDelete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dip"
+            android:layout_weight=".5"
+            android:clickable="true"
+            android:drawablePadding="5dip"
+            android:drawableTop="@drawable/custom_delete"
+            android:gravity="center"
+            android:onClick="onClickHandler"
+            android:text="@string/str_delete_account"
+            android:textColor="@android:color/black"
+            akshay:typeface="@string/font_raleway" />
+
+    </LinearLayout>
 
 
 </LinearLayout>

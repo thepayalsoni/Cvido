@@ -2,6 +2,7 @@ package com.cvido;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -39,14 +40,17 @@ public class HomeActivity extends AppCompatActivity {
 
         loginData = CvidoApplication.getAppliation().getRegister();
         nvDrawer.getMenu().clear();
-        if (loginData != null && loginData.getData().getRoleId() == 2)
+
+        if (checkForJobSeeker()) {
             nvDrawer.inflateMenu(R.menu.drawer_view_jobseeker);
-        else
+        } else {
             nvDrawer.inflateMenu(R.menu.drawer_view_employer);
+        }
 
         drawerToggle = setupDrawerToggle();
         // Setup drawer view
         setupDrawerContent(nvDrawer);
+
     }
 
     private ActionBarDrawerToggle setupDrawerToggle() {
@@ -67,7 +71,7 @@ public class HomeActivity extends AppCompatActivity {
     public void selectDrawerItem(MenuItem menuItem) {
         // Create a new fragment and specify the fragment to show based on nav item clicked
         Fragment fragment = null;
-        Class fragmentClass;
+        Class fragmentClass = FirstFragment.class;
         switch (menuItem.getItemId()) {
             case R.id.nav_first_fragment:
                 fragmentClass = FirstFragment.class;
@@ -78,8 +82,14 @@ public class HomeActivity extends AppCompatActivity {
             case R.id.nav_third_fragment:
                 fragmentClass = ThirdFragment.class;
                 break;
+            case R.id.nav_logout_user:
+                CvidoApplication.getAppliation().logout(HomeActivity.this);
+                startActivity(new Intent(this, LoginActivity.class));
+                finish();
+                break;
             default:
                 fragmentClass = FirstFragment.class;
+                break;
         }
 
         try {
@@ -133,4 +143,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
 
+    private boolean checkForJobSeeker() {
+        if (loginData == null)
+            return false;
+        return loginData.getData().getRoleId() == 2 ? true : false;
+    }
 }
