@@ -12,12 +12,18 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.cvido.application.CvidoApplication;
 import com.cvido.fragment.FirstFragment;
+import com.cvido.fragment.MessageFragment;
 import com.cvido.fragment.SecondFragment;
 import com.cvido.fragment.ThirdFragment;
 import com.cvido.model.Register;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 public class HomeActivity extends AppCompatActivity {
     private DrawerLayout mDrawer;
@@ -25,11 +31,15 @@ public class HomeActivity extends AppCompatActivity {
     private NavigationView nvDrawer;
     private ActionBarDrawerToggle drawerToggle;
     Register loginData;
+    ImageLoader imgLoader;
+    View headerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        imgLoader = ImageLoader.getInstance();
         // Set a Toolbar to replace the ActionBar.
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -37,6 +47,7 @@ public class HomeActivity extends AppCompatActivity {
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         nvDrawer = (NavigationView) findViewById(R.id.nvView);
+        headerView = nvDrawer.getHeaderView(0);
 
         loginData = CvidoApplication.getAppliation().getRegister();
         nvDrawer.getMenu().clear();
@@ -51,6 +62,21 @@ public class HomeActivity extends AppCompatActivity {
         // Setup drawer view
         setupDrawerContent(nvDrawer);
 
+
+       Class fragmentClass = ThirdFragment.class;
+        Fragment fragment = null;
+        try {
+            fragment = (Fragment) fragmentClass.newInstance();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        // Insert the fragment by replacing any existing fragment
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.flContent, fragment).commit();
+
+        // Highlight the selected item has been done by NavigationView
+
     }
 
     private ActionBarDrawerToggle setupDrawerToggle() {
@@ -58,6 +84,17 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
+        ((TextView) headerView.findViewById(R.id.lblProfileName)).setText(CvidoApplication.getAppliation().getRegister().getData().getUsername());
+        ((TextView) headerView.findViewById(R.id.lblProfileEmail)).setText(CvidoApplication.getAppliation().getRegister().getData().getEmail());
+
+        imgLoader.displayImage(CvidoApplication.getAppliation().getRegister().getData().getAvatar(), (ImageView) headerView.findViewById(R.id.imgProfileUser));
+
+        if (CvidoApplication.getAppliation().getRegister().getData().getRoleId() == 2) {
+            ((LinearLayout) headerView.findViewById(R.id.llCompanyCredit)).setVisibility(View.GONE);
+        } else {
+            ((LinearLayout) headerView.findViewById(R.id.llCompanyCredit)).setVisibility(View.VISIBLE);
+        }
+
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -74,13 +111,13 @@ public class HomeActivity extends AppCompatActivity {
         Class fragmentClass = FirstFragment.class;
         switch (menuItem.getItemId()) {
             case R.id.nav_first_fragment:
-                fragmentClass = FirstFragment.class;
+                fragmentClass = ThirdFragment.class;
                 break;
             case R.id.nav_second_fragment:
                 fragmentClass = SecondFragment.class;
                 break;
-            case R.id.nav_third_fragment:
-                fragmentClass = ThirdFragment.class;
+            case R.id.nav_message_fragment:
+                fragmentClass = MessageFragment.class;
                 break;
             case R.id.nav_logout_user:
                 CvidoApplication.getAppliation().logout(HomeActivity.this);

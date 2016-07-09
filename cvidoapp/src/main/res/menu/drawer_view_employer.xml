@@ -5,7 +5,8 @@
             android:id="@+id/nav_first_fragment"
             android:checked="true"
             android:icon="@drawable/edit"
-            android:title="@string/slider_edit_profile" />
+            android:title="@string/slider_edit_profile"
+            />
         <item
             android:id="@+id/nav_second_fragment"
             android:icon="@drawable/edit"
@@ -17,7 +18,7 @@
 
         <item
             android:id="@+id/nav_fourth_fragment"
-            android:icon="@drawable/calendar_icon"
+            android:icon="@drawable/doc_icon"
             android:title="@string/slider_my_address_book" />
 
         <item
@@ -26,7 +27,7 @@
             android:title="@string/slider_shortlisted_cvs" />
 
         <item
-            android:id="@+id/nav_sixth_fragment"
+            android:id="@+id/nav_message_fragment"
             android:icon="@drawable/message_icon"
             android:title="@string/slider_message" />
 
@@ -37,7 +38,7 @@
 
         <item
             android:id="@+id/nav_eigth_fragment"
-            android:icon="@drawable/message_icon"
+            android:icon="@drawable/reviews_icon"
             android:title="@string/slider_reviews" />
 
         <item
@@ -47,7 +48,7 @@
 
         <item
             android:id="@+id/nav_logout_user"
-            android:icon="@drawable/suspend_account_icon"
+            android:icon="@drawable/sign_up"
             android:title="@string/slider_logout" />
     </group>
 </menu>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMessageParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dip">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <com.akslibrary.view.CircularImageView
+            android:id="@+id/imgMessageUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/no_image"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblMessageUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="asdadsfasdfadsf"
+        android:layout_toLeftOf="@+id/lblMessageDate"
+        android:padding="5dip"
+        android:textColor="@android:color/black"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:layout_toEndOf="@+id/relativeLayout" />
+
+    <TextView
+        android:id="@+id/lblMessageDecription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/lblMessageDate"
+        android:layout_alignRight="@+id/lblMessageDate"
+        android:layout_below="@+id/lblMessageUser"
+        android:text="adsdsaf"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:padding="5dip"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/lblMessageDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/lblMessageUser"
+        android:text="Yesterday"
+        android:textColor="@android:color/darker_gray" />
+</RelativeLayout>

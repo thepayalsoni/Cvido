@@ -25,7 +25,7 @@ public class ThirdFragment extends Fragment {
 
         Toolbar toolbar = ((HomeActivity) getActivity()).toolbar;
         title_toolbar = (TextView) toolbar.findViewById(R.id.title_toolbar);
-        title_toolbar.setText(getString(R.string.str_third_fragment));
+        title_toolbar.setText(getString(R.string.str_profile_fragment));
         return rootView;
     }
 }

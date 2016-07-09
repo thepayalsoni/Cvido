@@ -7,11 +7,23 @@
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-    <com.akslibrary.view.CircularImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="10dip"
-        android:src="@drawable/launcher" />
+    <RelativeLayout
+        android:layout_width="70dip"
+        android:layout_height="70dip"
+        android:layout_marginRight="10dip">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/avtar_box2" />
+
+        <com.akslibrary.view.CircularImageView
+            android:id="@+id/imgProfileUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="25dip"
+            android:src="@drawable/no_image" />
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -20,6 +32,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/lblProfileName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="COMPANY NAME"
@@ -27,21 +40,24 @@
             android:textColor="@android:color/white" />
 
         <TextView
+            android:id="@+id/lblProfileDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Android Developer with 4+ experience"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@android:color/darker_gray" />
 
-        <TextView
+        <com.akslibrary.view.TypefacedTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/location"
+            android:drawablePadding="3dip"
             android:text="Australia"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/color_title_bg" />
 
 
-        <TextView
+        <com.akslibrary.view.TypefacedTextView
+            android:id="@+id/lblProfileEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="akshay@gmail.com"
@@ -51,6 +67,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llCompanyCredit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dip"
@@ -64,7 +81,7 @@
             android:padding="10dip">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/lblProfileCredit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="500" />

@@ -7,6 +7,8 @@
     <string name="str_first_fragment">First Fragment</string>
     <string name="str_second_fragment">Second Fragment</string>
     <string name="str_third_fragment">Third Fragment</string>
+    <string name="str_message_fragment">Message</string>
+    <string name="str_profile_fragment">Profile</string>
 
     <string name="slider_edit_profile">Edit Profile</string>
     <string name="slider_buy_credit">Buy Credit</string>
@@ -77,9 +79,16 @@
     <string name="error_empty_filelds">Please enter all the fields first.</string>
     <string name="error_re_password">Re-password does not matched</string>
 
+    <string name="date_formate_1">yyyy-MM-dd hh:mm:ss</string>
+    <string name="str_send">SEND</string>
 
     <string name="URL_BASE">http://cvidoweb.betaclubs.com/api/</string>
+
     <string name="URL_REGISTER">register</string>
     <string name="URL_LOGIN">default/login</string>
+    <string name="URL_MESSAGE">jobseeker/my-messages?access_token=%1$s</string>
+    <string name="URL_MESSAGE_DETAIL">message/index?id=%1$s&amp;access_token=%2$s</string>
+    <string name="URL_REPLY_MESSAGE">message/reply?access_token=%1$s</string>
+
 
 </resources>

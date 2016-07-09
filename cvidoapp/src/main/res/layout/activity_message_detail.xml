@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/top"
+        android:layout_width="match_parent"
+        android:layout_height="50dip" />
+
+    <ListView
+        android:id="@+id/list_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        android:divider="@color/white"
+        android:dividerHeight="2dip" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dip">
+
+        <EditText
+            android:id="@+id/txt_message_description"
+            style="@style/style_textbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:minHeight="40dip"
+            android:padding="10dip"
+            android:singleLine="true"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btn_send_message"
+            style="@style/style_button_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:minHeight="40dip"
+            android:text="@string/str_send"
+            android:textSize="20dip" />
+    </LinearLayout>
+</LinearLayout>

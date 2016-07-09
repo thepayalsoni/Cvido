@@ -11,7 +11,7 @@
             android:icon="@drawable/edit"
             android:title="@string/slider_create_cv" />
         <item
-            android:id="@+id/nav_third_fragment"
+            android:id="@+id/nav_message_fragment"
             android:icon="@drawable/message_icon"
             android:title="@string/slider_message" />
 
@@ -27,17 +27,17 @@
 
         <item
             android:id="@+id/nav_eigth_fragment"
-            android:icon="@drawable/message_icon"
+            android:icon="@drawable/reviews_icon"
             android:title="@string/slider_reviews" />
 
         <item
             android:id="@+id/nav_ninth_fragment"
-            android:icon="@drawable/search_icon"
+            android:icon="@drawable/calendar_icon"
             android:title="@string/slider_availabity" />
 
         <item
             android:id="@+id/nav_logout_user"
-            android:icon="@drawable/suspend_account_icon"
+            android:icon="@drawable/sign_up"
             android:title="@string/slider_logout" />
     </group>
 </menu>

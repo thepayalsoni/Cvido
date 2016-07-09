@@ -6,4 +6,7 @@
 
     <dimen name="button_height">50dip</dimen>
     <dimen name="text_size">20dip</dimen>
+
+    <dimen name="navigation_icon_size">10dip</dimen>
+
 </resources>

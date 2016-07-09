@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlMessageParent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dip">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="80dip"
+        android:layout_height="80dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <com.akslibrary.view.CircularImageView
+            android:id="@+id/imgMessageUser"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/avtar_icon" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/lblMessageDate"
+        android:layout_marginTop="10dip"
+        android:src="@android:drawable/presence_video_online" />
+
+    <TextView
+        android:id="@+id/lblMessageUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/lblMessageDate"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:padding="5dip"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/lblMessageDecription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lblMessageUser"
+        android:layout_toLeftOf="@+id/lblMessageDate"
+        android:layout_toRightOf="@+id/relativeLayout"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:padding="5dip"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/darker_gray" />
+
+    <TextView
+        android:id="@+id/lblMessageDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Yesterday"
+        android:textColor="@android:color/white" />
+</RelativeLayout>
